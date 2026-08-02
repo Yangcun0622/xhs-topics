@@ -137,7 +137,7 @@ function render(filter){
     mb.onclick = (e)=>{ e.stopPropagation(); togglePosted(it.fn); };
     hd.appendChild(cp); hd.appendChild(mb);
     const ttl = document.createElement('div'); ttl.className='ttl'; ttl.textContent = it.title;
-    const im = document.createElement('img'); im.className='cover'; im.src = it.fn; im.alt = it.title; im.onclick = ()=>openLB(i);
+    const im = document.createElement('img'); im.className='cover'; im.src = it.fn; im.loading='lazy'; im.decoding='async'; im.alt = it.title; im.onclick = ()=>openLB(i);
     const bd = document.createElement('div'); bd.className='body'; bd.textContent = shortBody(it.body);
     d.appendChild(hd); d.appendChild(ttl); d.appendChild(im); d.appendChild(bd);
     grid.appendChild(d);
